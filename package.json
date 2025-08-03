@@ -1,0 +1,27 @@
+{
+  "name": "course-selling-app",
+  "version": "1.0.0",
+  "description": "Full-stack course selling application with React frontend and Node.js backend",
+  "main": "index.js",
+  "scripts": {
+    "install-server": "cd server && npm install",
+    "install-client": "cd client && npm install",
+    "install-all": "npm run install-server && npm run install-client",
+    "dev-server": "cd server && npm run dev",
+    "dev-client": "cd client && npm run dev", 
+    "start-server": "cd server && npm start",
+    "build-client": "cd client && npm run build",
+    "dev": "concurrently \"npm run dev-server\" \"npm run dev-client\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["course", "selling", "education", "fullstack", "react", "nodejs"],
+  "author": "PrajwalGraj",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "workspaces": [
+    "server",
+    "client"
+  ]
+}
